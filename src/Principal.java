@@ -1,6 +1,11 @@
 //Principal
 
 
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Scanner;
+import javafx.scene.shape.Path;
 import vision.Menu;
 
 /*
@@ -16,7 +21,9 @@ import vision.Menu;
 public class Principal {
     
     public static void main(String[] args){
+        
         Menu.ExibirMenu();
+        
     }
     
 }

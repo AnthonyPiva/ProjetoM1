@@ -62,9 +62,7 @@ public class ProblemaVisao {
         do{
             try{
                 dataProblema = formatadorData.parse(entrada.nextLine());
-//                if(dataProblema.after(new Date)){
-//                    System.out.println("Data no futuro");
-//                }
+                if(dataProblema.before(new Date()) || dataProblema.equals(new Date()))
                 break;
             }catch(Exception e){
                 System.out.println("Erro na data");
