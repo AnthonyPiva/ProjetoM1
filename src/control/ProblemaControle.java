@@ -10,6 +10,7 @@ package control;
 import java.util.ArrayList;
 import java.util.Date;
 import model.Problema;
+import model.ProblemaDao;
  
 /**  
  * 
@@ -20,22 +21,22 @@ public class ProblemaControle {
     public static void recebeFormularioCadastroProblema(String descricao, Date dataProblema){
         Problema a = new Problema();
         int i=1;
-        for(Problema obj : Problema.ObterLista()){
+        for(Problema obj : ProblemaDao.ObterLista()){
             i++;
         }
         a.setDescricao(descricao);
         a.setDataProblema(dataProblema);
         a.setCod(Integer.toString(i));
         a.setStatus("Aberto");
-        a.Salvar();
+        ProblemaDao.Salvar(a);
     }
     
     public static ArrayList<Problema> ObterLista(){
-        return Problema.ObterLista();
+        return ProblemaDao.ObterLista();
     }
     
     public static Problema ObterProblemaPeloCod(String op){
-        return Problema.ObterProblemaPeloCod(op);
+        return ProblemaDao.ObterProblemaPeloCod(op);
     }
     
 }

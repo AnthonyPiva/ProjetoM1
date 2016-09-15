@@ -40,6 +40,7 @@ public class ProblemaVisao {
                 System.out.println("Problema Nao Encontrado");
                 Menu.ExibirMenu();
             }else{
+                
                 encontrado.setStatus("Resolvido");
                 Menu.ExibirMenu();
             }

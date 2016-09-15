@@ -9,7 +9,13 @@ package model;
 
 import java.util.Date;
 import Saves.Save;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  *
@@ -20,23 +26,6 @@ public class Problema {
     private Date dataProblema;   
     private String Cod;
     
-    public void Salvar(){
-        Save.problemas.add(this);
-    }
-    
-    public static ArrayList<Problema> ObterLista(){
-        return Save.problemas;
-    }
-    
-    public static Problema ObterProblemaPeloCod(String op){
-        for(Problema obj : Problema.ObterLista()){
-            if(obj.getCod().equals(op)){
-                return obj;
-            }
-        }return null;
-    }
-
-
     /**
      * @return the descricao
      */
